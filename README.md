@@ -1,2 +1,3 @@
-# Elice_Coding_Python_I
-This is Elice Coding Run it Run it Python Class 1. 
+# Elice's Rabbit Coding
+#### Video Demo:  [Drone Deliver Cryptocurrency Pitch](https://youtu.be/JRjP3ZAro6w)
+#### Description: This is a sample description
