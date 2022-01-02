@@ -19,8 +19,43 @@ So far, around
 but now C20 million learners in the platform, and personally educated 30-40 students in 1:1 class uniform. 
 You can create your own course.
 
+
+For teachers, teacher dashboard is unlocked, where they can create a homework and see student's which submitted homework. When accessing the homework, teacher can download the submitted file and then write a review and grade it.
+
+### Routing
+
+Each route checks if the user is authenticated. It means if correct mail and password were supplied and what role it has. So for example a teacher cannot enter /students/homeworks/1 route. The same is for student, he cannot enter teacher dashboard route.
+
+### Sessions
+
+The webpage uses sessions to confirm that user is registered. Once the user logins, his credentials are checked with bcrypt and Passport JS library. Once everything passes a session is created (serialized and deserialized) and stored in the cookies. The server attaches user to subsequent requests, so the back-end can easily access the details, like roles: student, teacher.
+
+### Database
+
+Database stores all users, homework, student submissions. The tables, like student submissions uses foreign keys to relate users to submitted homework. Moreover, homework table uses foreign keys to relate the homework to a teacher.
+
+## Current Improvements
+
+As all applications this one can also be improved. Possible improvements:
+
+- Have administrator account which confirms user identity, so that student could not register as a teacher
+- Ability to change account details
+- Have a way for teacher to upload videos, quizzes and contents to explain the assignment
+- Notificaitons to email about new homeworks or submissions
+
+## How to launch application
+
+1. Check that you have Android version 8+
+2. Clone the code: `엘리스 ELICE 코딩 교실_v1.1.7_apkpure.com`
+3. Run command prompt in the folder and run `npm install` to install all dependencies
+4. Once installed run command `npm start`
+5. In your browser go to `https://academy.elice.io/`
+6. You are ready to go!
+
+
 You can take part as a educator if you are enrolled in a computer science/software engineering degree of education. 
 If you are interested, I can ping you or help you as well. 
+
 
 For more inquiries, please contact <pinkgrape0691@gmail.com>
 <https://www.elice.io>
